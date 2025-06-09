@@ -22,6 +22,7 @@ console.log(reversingWord(reverseWord));*/
 
 //Lecture 2:DATA TYPES
 
+/*
 // The & Primitive Data Types( Numbers, Strings , Boolean, Undefined , Null, Symbol , BigInt)
 
 // Boolean Data Type(This is a logical Data Type That can only be true Or False Used In Making Decisions)
@@ -46,3 +47,32 @@ console.log(currentYear, typeof currentYear);
 // Symbol(Value That is unique and cannot be changed. Introduced In ES6)
 
 // BigInt(Introduced in es2020 ) Larger Integers than numbers can hold .
+*/
+
+// LET , VAR, AND CONST
+
+// Let (Keyword used To Declare Mutable Variables)es6
+
+let currentGirlfriend = "Maggie";
+console.log(
+  currentGirlfriend,
+  `Before Reassigning The Variable my GF was ${currentGirlfriend}`
+);
+
+currentGirlfriend = "Beatrice Nyagicuhi";
+console.log(
+  currentGirlfriend,
+  `AFter Reassigning The Variable my GF was ${currentGirlfriend}`
+);
+
+let careerToPursue;
+console.log(careerToPursue, typeof careerToPursue);
+
+careerToPursue = "Medicine";
+console.log(careerToPursue, typeof careerToPursue);
+
+// CONST (Used to declare immutable Variables)Variables that wont change
+const PI = 3.14579;
+console.log(PI);
+// PI = 478;
+// console.log(PI);
