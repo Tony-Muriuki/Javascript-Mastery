@@ -47,7 +47,7 @@ console.log(currentYear, typeof currentYear);
 // Symbol(Value That is unique and cannot be changed. Introduced In ES6)
 
 // BigInt(Introduced in es2020 ) Larger Integers than numbers can hold .
-*/
+
 
 // LET , VAR, AND CONST
 
@@ -63,7 +63,8 @@ currentGirlfriend = "Beatrice Nyagicuhi";
 console.log(
   currentGirlfriend,
   `AFter Reassigning The Variable my GF was ${currentGirlfriend}`
-);
+);PI = 478;
+// console.log(PI);
 
 let careerToPursue;
 console.log(careerToPursue, typeof careerToPursue);
@@ -76,3 +77,14 @@ const PI = 3.14579;
 console.log(PI);
 // PI = 478;
 // console.log(PI);
+*/
+
+// Basic operators
+const currentYear = 2037;
+const ageJonas = currentYear - 1991;
+const ageSarah = currentYear - 2018;
+console.log(ageJonas, "Years", ageSarah, "Years");
+
+const firstName = "Tony";
+const lastName = "Kamande";
+console.log(firstName + " " + lastName);
