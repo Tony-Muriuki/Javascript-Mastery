@@ -88,7 +88,7 @@ console.log(ageJonas, "Years", ageSarah, "Years");
 const firstName = "Tony";
 const lastName = "Kamande";
 console.log(firstName + " " + lastName);
-*/
+
 
 // Strings And Template Literals
 const firstName = "Tony";
@@ -102,3 +102,4 @@ console.log(tony);
 
 // \n\ Used To create multiple lines In Javascript;
 // \n Used To Create multiple lnes in Python
+*/
