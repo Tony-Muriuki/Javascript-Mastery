@@ -103,3 +103,26 @@ console.log(tony);
 // \n\ Used To create multiple lines In Javascript;
 // \n Used To Create multiple lnes in Python
 */
+
+let dataTypeStr = "435";
+console.log(typeof dataTypeStr, "No Typeconversion");
+
+dataTypeStr = Number(dataTypeStr);
+console.log(typeof dataTypeStr, "Type conversion");
+
+// Switch CAse
+
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("first");
+    break;
+  case "Tuesday":
+    console.log(second);
+    break;
+  case "Wednesday":
+    console.log(thirrd);
+    break;
+  default:
+    console.log("Not a valid Day");
+}
