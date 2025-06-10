@@ -77,7 +77,7 @@ const PI = 3.14579;
 console.log(PI);
 // PI = 478;
 // console.log(PI);
-*/
+
 
 // Basic operators
 const currentYear = 2037;
@@ -88,3 +88,17 @@ console.log(ageJonas, "Years", ageSarah, "Years");
 const firstName = "Tony";
 const lastName = "Kamande";
 console.log(firstName + " " + lastName);
+*/
+
+// Strings And Template Literals
+const firstName = "Tony";
+const currentJob = "Software Engineer";
+const birthYear = 1991;
+
+const tony = `I'm ${firstName} a ${currentJob} born in ${birthYear} so currently am ${
+  2025 - birthYear
+}years old`;
+console.log(tony);
+
+// \n\ Used To create multiple lines In Javascript;
+// \n Used To Create multiple lnes in Python
