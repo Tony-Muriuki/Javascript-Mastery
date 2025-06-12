@@ -39,7 +39,7 @@ console.log(ageOne, age2);
 
 const calcAge3 = (birthYear) => 2037 - birthYear;
 const age3 = calcAge3(2007);
-console.log(age3);*/
+console.log(age3);
 
 // Function Calling Other Functions
 
@@ -53,4 +53,24 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
-console.log(fruitProcessor(39, 33));
+console.log(fruitProcessor(39, 33));*/
+
+// Arrays
+
+// An array is a data structure consisiting of a collection of elements each identified by at least an array index
+
+// Array One
+const techCareers = [
+  "Software Engineer",
+  "Cybersecurity",
+  "AI Engineer",
+  "Devops",
+  "Project Manager",
+  "Operation Manager",
+];
+console.log("Length of techCareers Array:", techCareers.length);
+
+// Method(Forming an Array using The Array Constructor())
+
+const phones = new Array("Iphone", "Samsung", "HMD", "Oppo", "Itel", "Infinix");
+console.log("Length of Phones Array:", phones.length);
