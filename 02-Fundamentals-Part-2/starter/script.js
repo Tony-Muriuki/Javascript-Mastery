@@ -1,5 +1,5 @@
 "strict";
-
+/*
 // FUNCTIONS
 function logger() {
   console.log("My Name is Jonas");
@@ -17,4 +17,4 @@ const appleJuice = fruitProcessor(5, 0);
 console.log("AppleJuice", appleJuice);
 
 const appleOrangeJuice = fruitProcessor(5, 2);
-console.log("Apple x OrangeJuice", appleOrangeJuice);
+console.log("Apple x OrangeJuice", appleOrangeJuice);*/
