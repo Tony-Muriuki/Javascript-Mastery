@@ -17,7 +17,7 @@ const appleJuice = fruitProcessor(5, 0);
 console.log("AppleJuice", appleJuice);
 
 const appleOrangeJuice = fruitProcessor(5, 2);
-console.log("Apple x OrangeJuice", appleOrangeJuice);*/
+console.log("Apple x OrangeJuice", appleOrangeJuice);
 
 // Function Declaration Vs Function Expressions
 
@@ -33,4 +33,4 @@ const calcAge2 = function (birthYear) {
   return 2037 - birthYear;
 };
 const age2 = calcAge2(2007);
-console.log(ageOne, age2);
+console.log(ageOne, age2);*/
