@@ -33,10 +33,24 @@ const calcAge2 = function (birthYear) {
   return 2037 - birthYear;
 };
 const age2 = calcAge2(2007);
-console.log(ageOne, age2);*/
+console.log(ageOne, age2);
 
 // ARROW FUNCTIONS
 
 const calcAge3 = (birthYear) => 2037 - birthYear;
 const age3 = calcAge3(2007);
-console.log(age3);
+console.log(age3);*/
+
+// Function Calling Other Functions
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+  const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges`;
+  return juice;
+}
+console.log(fruitProcessor(2, 3));
+console.log(fruitProcessor(39, 33));
