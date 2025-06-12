@@ -34,3 +34,9 @@ const calcAge2 = function (birthYear) {
 };
 const age2 = calcAge2(2007);
 console.log(ageOne, age2);*/
+
+// ARROW FUNCTIONS
+
+const calcAge3 = (birthYear) => 2037 - birthYear;
+const age3 = calcAge3(2007);
+console.log(age3);
