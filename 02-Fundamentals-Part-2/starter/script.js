@@ -98,3 +98,12 @@ const arr3 = [9, 10, 11, 12];
 
 const arr4 = arr1.concat(arr2, arr3);
 console.log("The New Merged Array Output is:", arr4);
+
+// Array.copyWithin()
+// The copyWithin() method of array instances ,shallow coppies part of this array to another location in the same array and returns the array without modifying its length
+
+const alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+console.log("The length of the alphabets array is:", alphabets.length);
+
+console.log(alphabets.copyWithin(0, 3, 5)); //This means copy item at index 3 and end at 5 to index 0
+// Outcome=d,e,b,c,f,g,h,i,j
