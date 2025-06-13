@@ -74,3 +74,27 @@ console.log("Length of techCareers Array:", techCareers.length);
 
 const phones = new Array("Iphone", "Samsung", "HMD", "Oppo", "Itel", "Infinix");
 console.log("Length of Phones Array:", phones.length);
+
+// Array.prototype.at()
+// The at method of array instances takes an interger positive/negative and returns the item at that index
+const array1 = [5, 12, 8, 130, 44];
+// Positive Integer
+let index = 2;
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+// Negative Integer
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+
+// Array.Prototype.concat()
+// The concat method of array instances is used to merge 2 or more arrays.It does not alter the existing array but returns a new array
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [5, 6, 7, 8];
+const arr3 = [9, 10, 11, 12];
+
+const arr4 = arr1.concat(arr2, arr3);
+console.log("The New Merged Array Output is:", arr4);
