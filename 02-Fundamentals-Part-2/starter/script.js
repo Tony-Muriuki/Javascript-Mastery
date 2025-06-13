@@ -151,3 +151,15 @@ const words = ["spray", "elite", "exuberant", "destruction", "present"];
 
 const result = words.filter((word) => word.length >= 6);
 console.log(result);
+
+const doubled = (num) => num * 2;
+const numArr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const doubledNumArr = numArr1.map(doubled);
+console.log(doubledNumArr);
+
+// Array.find()
+// The find method of array instances returns the firts elementin the provided array that satisfies the provided testing function
+
+const arrayNum = [1, 2, 3, 4, 78, 24, 35, 34, 67];
+const found = arrayNum.find((element) => element > 10);
+console.log(found);
