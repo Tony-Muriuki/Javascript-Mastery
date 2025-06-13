@@ -107,3 +107,33 @@ console.log("The length of the alphabets array is:", alphabets.length);
 
 console.log(alphabets.copyWithin(0, 3, 5)); //This means copy item at index 3 and end at 5 to index 0
 // Outcome=d,e,b,c,f,g,h,i,j
+
+// Array.every()
+// The every method of array instances is used to test whether all elements in the array pass the test implememnted by the provided function
+
+const isSubset = (array1, array2) =>
+  array2.every((element) => array1.includes(element));
+
+console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
+console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
+
+const isBelowThreshHold = (currentValue) => currentValue < 40;
+const array_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(array_1.every(isBelowThreshHold));
+
+// Problem: Check if an array contains all vowels
+// Write a function called containsAllVowels that takes a string as input and
+// returns true if the string contains all five vowels (a, e, i, o, u), and false otherwise.
+// The check should be case-insensitive.
+
+function containsAllVowels(str) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  const lowerStr = str.toLowerCase();
+  const result = vowels.every((element) => lowerStr.includes(element));
+  return result;
+}
+console.log(containsAllVowels("education")); // true
+console.log(containsAllVowels("hello world")); // false
+console.log(containsAllVowels("AEIOUaeiou")); // true
+console.log(containsAllVowels("programming")); // false
+console.log(containsAllVowels("uncopyrightable")); // true
