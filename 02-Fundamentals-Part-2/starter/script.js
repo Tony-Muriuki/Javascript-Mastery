@@ -163,3 +163,8 @@ console.log(doubledNumArr);
 const arrayNum = [1, 2, 3, 4, 78, 24, 35, 34, 67];
 const found = arrayNum.find((element) => element > 10);
 console.log(found);
+
+// Array.findIndex()
+// The findIndex method of array instances returns the index of the first element that satisfies the provided testing function
+const foundIndex = arrayNum.findIndex((element) => element > 10);
+console.log("The first Index of Element Is:", foundIndex);
