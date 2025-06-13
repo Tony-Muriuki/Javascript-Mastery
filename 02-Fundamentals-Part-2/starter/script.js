@@ -144,3 +144,10 @@ console.log(Array(3));
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(numbers.fill(45, 0, 6));
+
+// Array.Filter()
+// The filter method of array instances creates a shallow copy of a portion from a given array but filtered down to just the elements that pass or satisfy a given test implemented by a function.
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length >= 6);
+console.log(result);
