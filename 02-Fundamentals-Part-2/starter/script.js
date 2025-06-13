@@ -137,3 +137,10 @@ console.log(containsAllVowels("hello world")); // false
 console.log(containsAllVowels("AEIOUaeiou")); // true
 console.log(containsAllVowels("programming")); // false
 console.log(containsAllVowels("uncopyrightable")); // true
+console.log(Array(3));
+
+// Array.fill()
+// The fill method of array instances changes all elements within a range of indices in an array to a static value.It returns the modified array
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers.fill(45, 0, 6));
