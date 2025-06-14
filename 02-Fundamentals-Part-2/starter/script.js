@@ -168,3 +168,19 @@ console.log(found);
 // The findIndex method of array instances returns the index of the first element that satisfies the provided testing function
 const foundIndex = arrayNum.findIndex((element) => element > 10);
 console.log("The first Index of Element Is:", foundIndex);
+
+// Array.pop()
+// The pop method of array instances removes the last item from the array and returs the removed item.It modifies the length of the array.
+
+const cars = [
+  "Buggati",
+  "McLaren",
+  "Bentley",
+  "Ferrari",
+  "Maseratti",
+  "Lamborghini",
+];
+console.log("Length of car before Pop:", cars.length);
+const poppedCar = cars.pop();
+console.log(poppedCar);
+console.log("Length of Array after Pop:", cars.length);
