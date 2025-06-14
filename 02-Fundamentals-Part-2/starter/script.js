@@ -184,3 +184,10 @@ console.log("Length of car before Pop:", cars.length);
 const poppedCar = cars.pop();
 console.log(poppedCar);
 console.log("Length of Array after Pop:", cars.length);
+
+// Function to Reverse String
+
+const strReversed = (str) => str.split("").reverse().join("");
+console.log(strReversed("first"));
+console.log(strReversed("Tony"));
+console.log(strReversed("Beatrice"));
