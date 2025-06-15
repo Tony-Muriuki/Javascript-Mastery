@@ -53,7 +53,7 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
-console.log(fruitProcessor(39, 33));*/
+console.log(fruitProcessor(39, 33));
 
 // Arrays
 
@@ -249,4 +249,4 @@ console.log(longerCities1(cities1));
 // };
 
 // console.log(longerCities(cities2));
-// // // Output: ["Liverpool", "Edinburgh"]
+// // // Output: ["Liverpool", "Edinburgh"]*/
