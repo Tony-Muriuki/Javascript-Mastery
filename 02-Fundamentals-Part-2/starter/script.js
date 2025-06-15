@@ -191,3 +191,62 @@ const strReversed = (str) => str.split("").reverse().join("");
 console.log(strReversed("first"));
 console.log(strReversed("Tony"));
 console.log(strReversed("Beatrice"));
+
+// Array.splice()
+// The splice method of array instances changes the contents of an array by removing or replacing existing elements and or adding new elements in place.
+
+const sexStis = ["gonorrhea", "syphillis", "herpes", "hpv"];
+console.log("Before Splice:", sexStis);
+sexStis.splice(0, 0, "AIDS", "HIV");
+console.log("After splice:", sexStis);
+
+// Array.slice()
+// The array.slice method of array instances returns a shallow copy of a portion from an arrayinto a new array object selected from start to end.
+const wildAnimals = [
+  "Lion",
+  "Elephant",
+  "Rhino",
+  "Cheetah",
+  "Leopard",
+  "Buffalo",
+  "Chicken",
+  "Cow",
+  "Dog",
+  "Donkey",
+];
+const domesticAnimals = wildAnimals.splice(wildAnimals.indexOf("Chicken"));
+console.log(domesticAnimals);
+
+// Accessing Every Item In An Array
+const birds = ["Falcon", "Eagle", "Owl", "Parrot", "Hawk"];
+console.log("This is Orginal Array:", birds);
+
+const birdCopy = [];
+
+// accessing
+for (const bird of birds) {
+  birdCopy.push(bird);
+}
+console.log("This is the subcopy of birds Array:", birdCopy);
+
+// You are given an array of city names.Write A function that filters out the cities whose names are more than 8 characters long and returns a new array containing only those cities . Use the following Array
+
+const cities1 = ["London", "Liverpool", "Kajiado", "Edinburgh"];
+
+const longerCities1 = (city) => {
+  return city.filter((element) => element.length > 8);
+};
+// longerCities1(cities1);
+
+console.log(longerCities1(cities1));
+
+// Method2
+
+// const cities2 = ["London", "Liverpool", "Kajiado", "Edinburgh"];
+
+// const longerCities = (cityArray) => {
+//   return cityArray.filter((city) => city.length > 8);
+// };
+
+// console.log(longerCities(cities2));
+// // // Output: ["Liverpool", "Edinburgh"]
