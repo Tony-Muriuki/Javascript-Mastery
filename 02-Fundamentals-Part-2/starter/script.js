@@ -266,3 +266,26 @@ numbers.forEach((num) => {
 
 console.log("Even Numbers:", evenNum); // [2, 4, 6, 8, 10]
 console.log("Odd Numbers:", oddNum); // [1, 3, 5, 7, 9]*/
+
+// OBJECTS
+
+// Method1:Creating Objects using Object Literals
+const myGirlFriend = {
+  firstName: "Beatrice",
+  lastName: "Nyagicuhi",
+  career: "Doctor",
+  age: 2037 - 2007,
+  husband: "Tony",
+  children: 7,
+};
+
+console.log(myGirlFriend);
+
+// Method2 :Creating Objects Using new Object() constructor
+const exGirlfriend = new Object();
+exGirlfriend.firstName = "Maggie";
+exGirlfriend.career = "DJ Mixer";
+exGirlfriend.height = "4 inches";
+exGirlfriend.home = "Naromoru";
+
+console.log(exGirlfriend);
