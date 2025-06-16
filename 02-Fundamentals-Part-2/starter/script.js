@@ -249,7 +249,7 @@ console.log(longerCities1(cities1));
 // };
 
 // console.log(longerCities(cities2));
-// // // Output: ["Liverpool", "Edinburgh"]*/
+// // // Output: ["Liverpool", "Edinburgh"]
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -265,4 +265,4 @@ numbers.forEach((num) => {
 });
 
 console.log("Even Numbers:", evenNum); // [2, 4, 6, 8, 10]
-console.log("Odd Numbers:", oddNum); // [1, 3, 5, 7, 9]
+console.log("Odd Numbers:", oddNum); // [1, 3, 5, 7, 9]*/
