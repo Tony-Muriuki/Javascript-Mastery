@@ -46,8 +46,9 @@ const restaurant = {
   },
 };
 
-// Check if the array is a subset of the other.
+// Check if the array is a SUBSET of the other.
 const arrNum1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Superset array
 const arrNum2 = [3, 5, 6, 8, 1];
 
-// const isSubSet=()
+const isSubSet = (arr1, arr2) => arr2.every(element => arr1.includes(element));
+console.log(isSubSet(arrNum1, arrNum2));
