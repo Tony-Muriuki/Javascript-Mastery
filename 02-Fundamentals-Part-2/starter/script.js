@@ -265,7 +265,7 @@ numbers.forEach((num) => {
 });
 
 console.log("Even Numbers:", evenNum); // [2, 4, 6, 8, 10]
-console.log("Odd Numbers:", oddNum); // [1, 3, 5, 7, 9]*/
+console.log("Odd Numbers:", oddNum); // [1, 3, 5, 7, 9]
 
 // OBJECTS
 
@@ -295,3 +295,4 @@ myGirlFriend.status = "Dating";
 exGirlfriend["status"] = "BreakUp";
 console.log(exGirlfriend);
 console.log(myGirlFriend);
+*/
