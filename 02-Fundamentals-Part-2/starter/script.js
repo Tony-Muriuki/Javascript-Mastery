@@ -289,3 +289,9 @@ exGirlfriend.height = "4 inches";
 exGirlfriend.home = "Naromoru";
 
 console.log(exGirlfriend);
+
+// Adding using dot notaion
+myGirlFriend.status = "Dating";
+exGirlfriend["status"] = "BreakUp";
+console.log(exGirlfriend);
+console.log(myGirlFriend);
