@@ -58,3 +58,15 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
+// The Spread Parameter(...)
+
+const carsArr = ['Maseratti', 'Lamborghini', 'McLaren'];
+const allCarsArr = [
+  'AstonMartin',
+  'BMW',
+  'Audi',
+  'Ferrari',
+  'Bughatti',
+  ...carsArr,
+];
+console.log(allCarsArr);
