@@ -46,9 +46,26 @@ const restaurant = {
   },
 };
 
-// Check if the array is a SUBSET of the other.
-const arrNum1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Superset array
-const arrNum2 = [3, 5, 6, 8, 1];
+// // Check if the array is a SUBSET of the other.
+// const arrNum1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Superset array
+// const arrNum2 = [3, 5, 6, 8, 1];
 
-const isSubSet = (arr1, arr2) => arr2.every(element => arr1.includes(element));
-console.log(isSubSet(arrNum1, arrNum2));
+// const isSubSet = (arr1, arr2) => arr2.every(element => arr1.includes(element));
+// console.log(isSubSet(arrNum1, arrNum2));
+
+// Retrieving Each One Of Them Without Destructuring
+const arr = [2, 3, 4];
+
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+
+console.log('Non-Destructured a:', a);
+console.log('Non-Destructured b:', b);
+console.log('Non-Destructured c:', c);
+
+// Retrieving Using Destructuring(Square Brackets Syntax[])
+const [x, y, z] = arr;
+console.log('Destructured X:', x);
+console.log('Destructured Y:', y);
+console.log('Destructured Z:', z);
