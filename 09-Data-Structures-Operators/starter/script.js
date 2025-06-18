@@ -29,29 +29,10 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
-
-// // Check if the array is a SUBSET of the other.
-// const arrNum1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; //Superset array
-// const arrNum2 = [3, 5, 6, 8, 1];
-
-// const isSubSet = (arr1, arr2) => arr2.every(element => arr1.includes(element));
-// console.log(isSubSet(arrNum1, arrNum2));
 
 // Retrieving Each One Of Them Without Destructuring
 const arr = [2, 3, 4];
@@ -69,3 +50,23 @@ const [x, y, z] = arr;
 console.log('Destructured X:', x);
 console.log('Destructured Y:', y);
 console.log('Destructured Z:', z);
+
+// Destructuring From The Categories ARray
+
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
+
+[main, secondary] = [secondary, main];
+console.log(main, secondary);
+
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
+
+// DEstructuring A Nested Array
+const nested = [2, 4, [5, 6]];
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+// Default Values
+const [p = 1, q = 1, r = 1] = [, 2];
+console.log(p, q, r);
