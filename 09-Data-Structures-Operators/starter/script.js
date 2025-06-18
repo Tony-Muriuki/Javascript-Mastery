@@ -33,7 +33,7 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
-
+/*
 // Retrieving Each One Of Them Without Destructuring
 const arr = [2, 3, 4];
 
@@ -69,4 +69,4 @@ console.log(i, j, k);
 
 // Default Values
 const [p = 1, q = 1, r = 1] = [, 2];
-console.log(p, q, r);
+console.log(p, q, r);*/
