@@ -58,32 +58,3 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
-
-// Destructuring Objects
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
-
-// Renaming Variables
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log('Renamed Variables', restaurantName, hours, tags);
-
-// Default Values
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
-
-// Mutating Variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-console.log(a, b);
-
-// Destructuring Nested Arrays
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
