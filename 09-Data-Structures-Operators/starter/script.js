@@ -57,13 +57,3 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-
-// ✅ This call should log correctly
-restaurant.orderDelivery({
-  time: '22:30pm',
-  address: 'Via Del Sol,21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
-// REst Parameter
-restaurant.orderPizza('Mushrooms', 'Onions', 'olives', 'Spinach');
