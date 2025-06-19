@@ -57,3 +57,9 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+
+// loop String
+
+for (const char of 'Beatrice') {
+  console.log(char);
+}
