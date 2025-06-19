@@ -61,33 +61,3 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
-// The Spread Parameter(...)
-
-const carsArr = ['Maseratti', 'Lamborghini', 'McLaren'];
-const allCarsArr = [
-  'AstonMartin',
-  'BMW',
-  'Audi',
-  'Ferrari',
-  'Bughatti',
-  ...carsArr,
-];
-console.log('Non-Spread', allCarsArr);
-console.log('Spread', ...allCarsArr);
-
-// Expanding
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
-
-// Copying
-const mainMenuCopy = [...restaurant.mainMenu];
-console.log('Copy Main menu:', mainMenuCopy);
-
-// Join /Merge Two Arrays
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
-console.log('Merged Array Menu:', menu);
-
-// restaurant.orderPasta(...ingredients);
-// Objects
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guisepee' };
-console.log(newRestaurant);
