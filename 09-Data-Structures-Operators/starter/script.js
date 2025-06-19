@@ -52,6 +52,10 @@ const restaurant = {
   orderPasta: (ing1, ing2, ing3) => {
     console.log(`Here is Your Delicious Pasta with ${ing1},${ing2},${ing3}`);
   },
+  orderPizza: (mainIngredients, ...otherIngredients) => {
+    console.log(mainIngredients);
+    console.log(otherIngredients);
+  },
 };
 
 // ✅ This call should log correctly
@@ -61,3 +65,5 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
+// REst Parameter
+restaurant.orderPizza('Mushrooms', 'Onions', 'olives', 'Spinach');
