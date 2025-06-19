@@ -49,6 +49,9 @@ const restaurant = {
       `Order Received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+  orderPasta: (ing1, ing2, ing3) => {
+    console.log(`Here is Your Delicious Pasta with ${ing1},${ing2},${ing3}`);
+  },
 };
 
 // ✅ This call should log correctly
@@ -69,4 +72,22 @@ const allCarsArr = [
   'Bughatti',
   ...carsArr,
 ];
-console.log(allCarsArr);
+console.log('Non-Spread', allCarsArr);
+console.log('Spread', ...allCarsArr);
+
+// Expanding
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// Copying
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log('Copy Main menu:', mainMenuCopy);
+
+// Join /Merge Two Arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log('Merged Array Menu:', menu);
+
+// restaurant.orderPasta(...ingredients);
+// Objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guisepee' };
+console.log(newRestaurant);
