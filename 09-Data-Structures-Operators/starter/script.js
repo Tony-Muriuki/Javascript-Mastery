@@ -58,8 +58,14 @@ const restaurant = {
   },
 };
 
-// loop String
+// Optional Chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
 
-for (const char of 'Beatrice') {
-  console.log(char);
+// Array
+const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day} we open at ${open}`);
 }
