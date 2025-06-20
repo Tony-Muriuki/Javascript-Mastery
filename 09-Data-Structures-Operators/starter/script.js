@@ -70,4 +70,6 @@ for (const day of Object.keys(openingHours)) {
 }
 console.log(openStr);
 
-//
+//Looping Through Values
+const values = Object.values(openingHours);
+console.log(values);
