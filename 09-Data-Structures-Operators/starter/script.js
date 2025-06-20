@@ -58,17 +58,16 @@ const restaurant = {
   },
 };
 
-// Optional Chaining
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open);
+// Looping Through Keys....with Object.Keys()
+const { openingHours } = restaurant;
+const properties = Object.keys(openingHours);
+console.log('Properties', properties);
 
-// Array
-const days = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
-for (const day of days) {
-  console.log(day);
-  const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day} we open at ${open}`);
+let openStr = `We are open on ${properties.length} days:`;
+
+for (const day of Object.keys(openingHours)) {
+  openStr += `${day}, `;
 }
+console.log(openStr);
 
-// Methods
-console.log(restaurant.orderRisotoo?.(0, 1) ?? 'Method Does Not Exist');
+//
