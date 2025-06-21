@@ -73,3 +73,11 @@ console.log(openStr);
 //Looping Through Values
 const values = Object.values(openingHours);
 console.log(values);
+
+// Looping Through Entries
+const entries = Object.entries(openingHours);
+// console.log(entries);
+
+for (const [keys, { open, close }] of entries) {
+  console.log(`On ${keys} we open at ${open} and close at ${close}`);
+}
