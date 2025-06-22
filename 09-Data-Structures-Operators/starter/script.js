@@ -81,3 +81,30 @@ const entries = Object.entries(openingHours);
 for (const [keys, { open, close }] of entries) {
   console.log(`On ${keys} we open at ${open} and close at ${close}`);
 }
+
+// Bookstore Object
+const bookstore = {
+  name: 'Readers Haven',
+  location: 'Nairobi, Kenya',
+  categories: ['Fiction', 'Science', 'Biography', 'Self-Help'],
+  inventory: {
+    mon: { open: 9, close: 18 },
+    tue: { open: 9, close: 18 },
+    wed: { open: 9, close: 18 },
+    fri: { open: 10, close: 20 },
+  },
+  bestSellers: ['Atomic Habits', 'Sapiens', 'Educated'],
+
+  orderBook: function (index) {
+    return `You ordered: ${this.bestSellers[index]}`;
+  },
+
+  orderDelivery({ bookIndex = 0, address, time = '15:00' }) {
+    console.log(
+      `📚 "${this.bestSellers[bookIndex]}" will be delivered to ${address} at ${time}.`
+    );
+  },
+};
+
+// Looping Through The Object Keys
+const bookStoreKeys = [];
