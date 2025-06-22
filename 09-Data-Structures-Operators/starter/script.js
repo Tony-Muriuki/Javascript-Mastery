@@ -108,3 +108,23 @@ const bookstore = {
 
 // Looping Through The Object Keys
 const bookStoreKeys = [];
+
+for (const books of Object.keys(bookstore)) {
+  bookStoreKeys.push(books);
+}
+console.log('Keys', bookStoreKeys);
+console.log(
+  `The Object.keys() method returns an array of values of length ${bookStoreKeys.length}`
+);
+
+// Looping Through The Objects Values
+const bookStoreValues = [];
+
+// Next will Use The For of Loop()
+for (const booksValues of Object.values(bookstore)) {
+  bookStoreValues.push(booksValues);
+}
+console.log('Values', bookStoreValues);
+console.log(
+  `The Object.Value() method returns an array of values of length ${bookStoreValues.length}`
+);
