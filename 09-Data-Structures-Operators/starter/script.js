@@ -128,3 +128,9 @@ console.log('Values', bookStoreValues);
 console.log(
   `The Object.Value() method returns an array of values of length ${bookStoreValues.length}`
 );
+
+// Looping Through Object Key Value Pairs
+
+for (const [keys, values] of Object.entries(bookstore)) {
+  console.log(`${keys}:${values}`);
+}
