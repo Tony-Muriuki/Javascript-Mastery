@@ -58,4 +58,9 @@ const restaurant = {
   },
 };
 
-const name ="Linda"
+const name = 'Linda';
+const nameArr = [];
+for (const char of name) {
+  nameArr.push(char);
+}
+console.log(nameArr);
