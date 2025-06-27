@@ -58,15 +58,4 @@ const restaurant = {
   },
 };
 
-const name = 'Linda';
-const nameArr = [];
-for (const char of name) {
-  nameArr.push(char);
-}
-console.log(nameArr);
-
-// Reverse Lindas BF Name
-const bfName = 'Samuel';
-
-const reverseName = bfName.split('').reverse().join('');
-console.log(reverseName);
+const name = 'linda';
