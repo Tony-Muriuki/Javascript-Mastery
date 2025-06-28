@@ -57,5 +57,3 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-
-const name = 'linda';
