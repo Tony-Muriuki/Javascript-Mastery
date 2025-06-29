@@ -57,3 +57,6 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+
+const num1 = [1, 2, 3, 4, 5, 6, 7, 8];
+const num2 = [3, 4, 7, 9, 5];
