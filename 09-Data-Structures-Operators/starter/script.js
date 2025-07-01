@@ -64,3 +64,6 @@ console.log(mySet);
 mySet.add(7);
 console.log(mySet.has(8));
 console.log(mySet);
+
+mySet.delete(2);
+console.log(mySet);
