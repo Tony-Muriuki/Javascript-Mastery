@@ -58,12 +58,12 @@ const restaurant = {
   },
 };
 
-const mySet = new Set([1, 2, 3, 4, 5, 6]);
-console.log(mySet);
-
-mySet.add(7);
-console.log(mySet.has(8));
-console.log(mySet);
-
-mySet.delete(2);
-console.log(mySet);
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
