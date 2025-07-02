@@ -40,6 +40,46 @@ const restaurant = {
   },
 };
 
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
+//  Key Methods of Set
+
+// Set.size() Returns The number of Unique Elements in The Set
+console.log(orderSet.size);
+
+// Set.has() Checks if a specific element exists in the set. Returns True or False
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Githeri'));
+
+// Set.add() Adds a new element to the set.If the element already exists it wont be added
+orderSet.add('Garlic Bread');
+console.log(orderSet);
+
+// Set.Delete Deletes a specific element from the set
+orderSet.delete('Pizza');
+console.log(orderSet);
+
+// Converting Set To An array: we can convert a set into an array by destructuring or using array.from()
+const mySet = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const myArray = [...mySet];
+console.log(myArray);
+
+// Converting sets to array using Array.from()
+const myArray2 = Array.from(mySet);
+console.log(myArray2);
+
+// Converting Array to Set
+const arrayNames = ['Tony', 'Beatrice', 'Josephine', 'Tyla', 'Audrey'];
+const mySet3 = new Set(arrayNames);
+console.log(mySet3);
+
 // New operations To make Sets Useful
 const italianFoods = new Set([
   'pasta',
@@ -58,3 +98,26 @@ const mexicanFoods = new Set([
   'avocado',
   'garlic',
 ]);
+
+// 01: Intersection The intersections of two sets returns only the elements that are present in both sets
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log(commonFoods);
+
+// 02 Union A union of two sets combines all unique elements from both sets
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log(italianMexicanFusion);
+
+// 03 Difference The difference of two sets returns the elementsthat are in the first set but not in the second set
+
+const differentSet = italianFoods.difference(mexicanFoods);
+console.log(differentSet);
+
+// 04 symetric Difference Returns a new set that are either in a or b but not in both
+
+const a = new Set([1, 2, 3]);
+const b = new Set([3, 4, 5]);
+
+const result = a.symmetricDifference(b);
+console.log(result);
+// Symmetric difference returns a new set containing all elements that are either in a or b but not in both
