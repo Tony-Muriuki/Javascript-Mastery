@@ -107,3 +107,8 @@ console.log(commonFoods);
 
 const italianMexicanFusion = italianFoods.union(mexicanFoods);
 console.log(italianMexicanFusion);
+
+// 03 Difference The difference of two sets returns the elementsthat are in the first set but not in the second set
+
+const differentSet = italianFoods.difference(mexicanFoods);
+console.log(differentSet);
