@@ -88,3 +88,7 @@ console.log(orderSet);
 const mySet = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 const myArray = [...mySet];
 console.log(myArray);
+
+// Converting sets to array using Array.from()
+const myArray2 = Array.from(mySet);
+console.log(myArray2);
