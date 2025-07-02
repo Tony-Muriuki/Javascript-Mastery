@@ -102,3 +102,8 @@ const mexicanFoods = new Set([
 // 01: Intersection The intersections of two sets returns only the elements that are present in both sets
 const commonFoods = italianFoods.intersection(mexicanFoods);
 console.log(commonFoods);
+
+// 02 Union A union of two sets combines all unique elements from both sets
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log(italianMexicanFusion);
