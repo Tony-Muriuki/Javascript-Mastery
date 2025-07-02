@@ -115,7 +115,7 @@ console.log(differentSet);
 
 // 04 symetric Difference Returns a new set that are either in a or b but not in both
 
-const a = new Set([1, 2, 3, 4, 5]);
+const a = new Set([1, 2]);
 const b = new Set([3, 4, 5]);
 
 const result = a.symmetricDifference(b);
@@ -129,3 +129,7 @@ console.log(b.isSubsetOf(a)); //False
 // 06:isSupersetOf Return true if the currents set contains all elements in the given set
 console.log(a.isSupersetOf(b));
 console.log(b.isSupersetOf(a));
+
+// 07 isDisjointFrom() Returns true if the two sets have no elements in common(are completely different)
+console.log(a.isDisjointFrom(b));
+console.log(b.isDisjointFrom(a));
