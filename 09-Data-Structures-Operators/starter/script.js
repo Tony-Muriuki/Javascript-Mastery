@@ -67,3 +67,5 @@ const orderSet = new Set([
   'Pizza',
 ]);
 console.log(orderSet);
+//  Key Methods of Set
+console.log(orderSet.size);
