@@ -83,3 +83,8 @@ console.log(orderSet);
 // Set.Delete Deletes a specific element from the set
 orderSet.delete('Pizza');
 console.log(orderSet);
+
+// Converting Set To An array: we can convert a set into an array by destructuring or using array.from()
+const mySet = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const myArray = [...mySet];
+console.log(myArray);
