@@ -75,3 +75,7 @@ console.log(orderSet.size);
 // Set.has() Checks if a specific element exists in the set. Returns True or False
 console.log(orderSet.has('Pizza'));
 console.log(orderSet.has('Githeri'));
+
+// Set.add() Adds a new element to the set.If the element already exists it wont be added
+orderSet.add('Garlic Bread');
+console.log(orderSet);
