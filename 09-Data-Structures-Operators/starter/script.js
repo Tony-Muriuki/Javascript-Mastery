@@ -92,3 +92,8 @@ console.log(myArray);
 // Converting sets to array using Array.from()
 const myArray2 = Array.from(mySet);
 console.log(myArray2);
+
+// Converting Array to Set
+const arrayNames = ['Tony', 'Beatrice', 'Josephine', 'Tyla', 'Audrey'];
+const mySet3 = new Set(arrayNames);
+console.log(mySet3);
