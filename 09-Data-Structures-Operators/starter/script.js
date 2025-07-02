@@ -121,3 +121,7 @@ const b = new Set([3, 4, 5]);
 const result = a.symmetricDifference(b);
 console.log(result);
 // Symmetric difference returns a new set containing all elements that are either in a or b but not in both
+
+// 05:isSubsetOf returns true if all elements of the current set exists in the given set
+console.log(a.isSubsetOf(b)); //False
+console.log(b.isSubsetOf(a)); //False
