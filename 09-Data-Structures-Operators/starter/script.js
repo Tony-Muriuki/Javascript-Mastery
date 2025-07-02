@@ -79,3 +79,7 @@ console.log(orderSet.has('Githeri'));
 // Set.add() Adds a new element to the set.If the element already exists it wont be added
 orderSet.add('Garlic Bread');
 console.log(orderSet);
+
+// Set.Delete Deletes a specific element from the set
+orderSet.delete('Pizza');
+console.log(orderSet);
