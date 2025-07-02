@@ -4,24 +4,6 @@
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-const italianFoods = new Set([
-  'pasta',
-  'gnocchi',
-  'tomatoes',
-  'olive oil',
-  'garlic',
-  'basil',
-]);
-
-const mexicanFoods = new Set([
-  'tortillas',
-  'beans',
-  'rice',
-  'tomatoes',
-  'avocado',
-  'garlic',
-]);
-
 // Data needed for first part of the section
 const restaurant = {
   name: 'Classico Italiano',
@@ -97,3 +79,26 @@ console.log(myArray2);
 const arrayNames = ['Tony', 'Beatrice', 'Josephine', 'Tyla', 'Audrey'];
 const mySet3 = new Set(arrayNames);
 console.log(mySet3);
+
+// New operations To make Sets Useful
+const italianFoods = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+]);
+
+const mexicanFoods = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
+
+// 01: Intersection The intersections of two sets returns only the elements that are present in both sets
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log(commonFoods);
