@@ -68,4 +68,10 @@ const orderSet = new Set([
 ]);
 console.log(orderSet);
 //  Key Methods of Set
+
+// Set.size() Returns The number of Unique Elements in The Set
 console.log(orderSet.size);
+
+// Set.has() Checks if a specific element exists in the set. Returns True or False
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Githeri'));
