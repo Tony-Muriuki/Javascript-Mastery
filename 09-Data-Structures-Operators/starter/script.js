@@ -108,6 +108,7 @@ const myMap = new Map();
 // Setting values
 myMap.set('name', 'Tony');
 myMap.set('age', 25);
+myMap.set('Girlfriend', 'Beatrice');
 myMap.set('country', 'Kenya');
 
 console.log(myMap);
