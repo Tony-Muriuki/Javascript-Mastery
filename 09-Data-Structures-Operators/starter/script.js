@@ -101,8 +101,6 @@ const mexicanFoods = new Set([
 
 // MAPS a map is a built in Javascript Datastructure consisiting of key value pairs similar to objects however there are some key differences
 
-const map = new map();
-
 const myMap = new Map();
 
 // Setting values
