@@ -111,3 +111,5 @@ myMap.set('country', 'Kenya');
 
 console.log(myMap);
 // Output: Map(3) {'name' => 'Tony', 'age' => 25, 'country' => 'Kenya'}
+
+const rest = new Map();
