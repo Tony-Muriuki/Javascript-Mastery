@@ -103,16 +103,5 @@ const mexicanFoods = new Set([
 
 const myMap = new Map();
 
-// Setting values
-myMap.set('name', 'Tony');
-myMap.set('Name', 'Audrey');
-myMap.set('age', 25);
-myMap.set('Girlfriend', 'Beatrice');
-myMap.set('country', 'Kenya');
-myMap.clear();
-
-console.log(myMap);
-// Output: Map(3) {'name' => 'Tony', 'age' => 25, 'country' => 'Kenya'}
-
 const rest = new Map();
 // rest.set() adds or updates
