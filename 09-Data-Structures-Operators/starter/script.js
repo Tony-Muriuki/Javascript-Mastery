@@ -105,3 +105,5 @@ const myMap = new Map();
 
 const rest = new Map();
 // rest.set() adds or updates
+rest.set('Hotel', 'Outspan');
+console.log(rest);
