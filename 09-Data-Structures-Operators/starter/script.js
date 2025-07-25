@@ -99,11 +99,51 @@ const mexicanFoods = new Set([
   'garlic',
 ]);
 
-// MAPS a map is a built in Javascript Datastructure consisiting of key value pairs similar to objects however there are some key differences
+// A map is a built-in Javascript Data structure consisting of a collection of key-value pairs similar to objects. However the key differences between a map and a plain Javascript Object is that,
+/*
+1: Map allows any type of keys(objects, functions, primitives etc).
+2:The size of a map can be easily retrieved using the .size() property
+3:The iteration of a map is based on tyhe insertion order.
+4:A map provides more utility methods compared to a plain JS objcet.*/
 
-const myMap = new Map();
+// const rest=new Map()//an empty map
 
 const rest = new Map();
-// rest.set() adds or updates
-rest.set('Hotel', 'Outspan');
+// console.log(rest.size);
+
+// MAP METHODS.
+// 1:Map.SET()---Adds or updates key-value pair in the map.If the key exists, then the value is updated.
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze,Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('Close', 23)
+  .set(true, 'We are Open')
+  .set(false, 'We are closed ');
+
+// Rest.get() Method Retrieves the value associated with the given key.If the key does not exsit it return undefined.
+
+console.log(rest.get(false));
+
+const time = 21;
+rest.get(time > rest.get('open') && time < rest.get('Close'));
+console.log(rest.get(time > rest.get('open') && time < rest.get('closed')));
+
+// Rest.has() method is used to check if the key exists in the map .Returns tru if the key exists otherwise false.
+console.log(rest.has('boy'));
+console.log(rest.has('open'));
 console.log(rest);
+
+// Rest.delete() Property is used to remove a key-value pair associated with the given key
+rest.delete('name');
+console.log(rest);
+
+// Rest.size() Returns the number of key-value Pairs in the map
+console.log(rest.size);
+
+// Rest.clear() property removes all key-value pairs in the map
+rest.clear();
+console.log(rest.size);
