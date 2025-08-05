@@ -147,3 +147,37 @@ console.log(rest.size);
 // Rest.clear() property removes all key-value pairs in the map
 rest.clear();
 console.log(rest.size);
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct 🎉'],
+  [false, 'Try again!'],
+]);
+
+// Looping Through a map
+
+for (const [key, value] of question) {
+  console.log(`This is the question Key ${key} and question Value ${value}`);
+}
+// Map iteration methods.
+// 1.Returns an iterator for the keys of the map
+for (const key of question.keys()) {
+  console.log(key);
+}
+// 2.Values() Returns an iterator for the values of the map
+for (const values of question.values()) {
+  console.log(values);
+}
+// 3.Retruns an iterator for the key value pairs like object.entries()
+for (const [key, value] of question.entries()) {
+  console.log(`${key} : ${value}`);
+}
+
+const myMap = new Map([
+  ['name', 'tony'],
+  ['age', 21],
+]);
