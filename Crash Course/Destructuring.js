@@ -47,4 +47,17 @@ console.log(userName); // Alice
 console.log(userAge); // 25
 console.log(userCountry); // Unknown
 
-// Nested Destructuring
+// Destructuring Arrays
+
+// syntax const [item1, item2] = array;
+
+const numbers = [1, 2, 3, 4];
+
+// Traditional way to access values
+const first = numbers[0];
+const second = numbers[1];
+console.log(first, second); // 1 2
+
+// Using destructuring
+const [first1, second1, third1] = numbers;
+console.log(first1, second1, third1); // 1 2
