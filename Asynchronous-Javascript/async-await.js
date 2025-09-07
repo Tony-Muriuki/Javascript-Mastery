@@ -3,8 +3,8 @@
 async function getBabyNames() {
   try {
     const data = await fetch("https://dog.ceo/api/breeds/list/all");
-    const dataJson = await data.json();
-    console.log(dataJson);
+    const fetchedData = await data.json();
+    console.log(fetchedData);
   } catch (error) {
     console.error(error.message);
   }
