@@ -10,3 +10,15 @@ async function getBabyNames() {
   }
 }
 getBabyNames(); //Invoking the function
+
+// Fetch Two
+
+async function getApi() {
+  try {
+    const fetchedApiData = await fetch("");
+    const dataJson = fetchedApiData.json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+getApi();
