@@ -82,3 +82,18 @@ console.log(i, j, k);
 // Default Values(Nested Destructuring)
 const [p = 1, q = 2, r = 3] = [8, 9];
 console.log(p, q, r);
+
+// OBJECT DESTRUCTURING
+
+// Object destructuring is an es6 feature that allows  you to extract properties from an object and assign them to a distinct variable using a concise and readable syntax
+
+// Object Destructuring Syntax
+const info = {
+  fname: 'Dennis',
+  sname: 'Muhia',
+  idNo: 45678490,
+};
+
+// Using destructuring
+const { fname: prop1, sname: prop2 } = info;
+console.log(prop1, prop2);
