@@ -45,3 +45,28 @@ const restaurant = {
     },
   },
 };
+
+//Lecture 108: DESTRUCTURING ARRAYS LESSON
+// ---- Defination:
+// Array destructuring is a modern Javascript (es6 : ECMAScript 2015 ) feature that allows you to unpack elements from an array into individual variables in a concise and readable way / manner.
+
+// Simple Array
+const arr = [2, 3, 4, 5, 6, 7, 8]; //Array of Nums
+
+// Retrieve 'arr' elements without es6 feat destructuring into an individual variable
+// const a = arr[0];
+// console.log(a, 'Without Destructuring');
+// const b = arr[1];
+// console.log(b, 'Without Destructuring');
+// const c = arr[2];
+// console.log(c, 'Without Destructuring'); //DRY : Don't Repeat  Yourself
+// const d = arr[3];
+// console.log(d, 'Without Destructuring');
+// const e = arr[4];
+// console.log(e, 'Without Destructuring');
+// const f = arr[5];
+// console.log(f, 'Without Destructuring');
+
+// Retrieving 'arr' Elements using Destructuring;
+const [a, b, c, d, e, f] = arr;
+console.log(c, 'Destructured ES6');
