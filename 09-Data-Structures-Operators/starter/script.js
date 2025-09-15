@@ -29,6 +29,9 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 
   openingHours: {
     thu: {
@@ -47,26 +50,37 @@ const restaurant = {
 };
 
 //Lecture 108: DESTRUCTURING ARRAYS LESSON
+
+// Destructuring Defination:
+
+//  Destructuring is a feature introduced in ES6 (ECMAScript 2015) that allows you to extract values from arrays or properties from objects into distinct variables. This feature simplifies the process of accessing and working with data structures.
+
 // ---- Defination:
 // Array destructuring is a modern Javascript (es6 : ECMAScript 2015 ) feature that allows you to unpack elements from an array into individual variables in a concise and readable way / manner.
 
 // Simple Array
 const arr = [2, 3, 4, 5, 6, 7, 8]; //Array of Nums
 
-// Retrieve 'arr' elements without es6 feat destructuring into an individual variable
-// const a = arr[0];
-// console.log(a, 'Without Destructuring');
-// const b = arr[1];
-// console.log(b, 'Without Destructuring');
-// const c = arr[2];
-// console.log(c, 'Without Destructuring'); //DRY : Don't Repeat  Yourself
-// const d = arr[3];
-// console.log(d, 'Without Destructuring');
-// const e = arr[4];
-// console.log(e, 'Without Destructuring');
-// const f = arr[5];
-// console.log(f, 'Without Destructuring');
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
 
-// Retrieving 'arr' Elements using Destructuring;
-const [a, b, c, d, e, f] = arr;
-console.log(c, 'Destructured ES6');
+// Switching Variables
+[main, secondary] = [secondary, main];
+console.log(main, secondary);
+
+// Invoking Method
+const [starter, mainn] = restaurant.order(2, 0);
+
+// Receiving 2 Return Values From A function
+console.log(starter, mainn);
+
+// Nested Array Destructuring
+const nested = [2, 4, [5, 6]];
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+// Default Values(Nested Destructuring)
+const [p = 1, q = 2, r = 3] = [8, 9];
+console.log(p, q, r);
+
+// Array
