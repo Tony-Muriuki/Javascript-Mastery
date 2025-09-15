@@ -82,5 +82,3 @@ console.log(i, j, k);
 // Default Values(Nested Destructuring)
 const [p = 1, q = 2, r = 3] = [8, 9];
 console.log(p, q, r);
-
-// Array
