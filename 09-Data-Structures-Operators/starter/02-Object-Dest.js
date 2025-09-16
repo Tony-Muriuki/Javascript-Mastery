@@ -222,3 +222,7 @@ const books = [
     highlighted: true,
   },
 ];
+
+// Destructure the first book object from the books array into variables called title, author and ISBN.
+const [{ title, author, ISBN }] = books; // This is because the above data is an array of objects. so we use the square bracket '[ ]' syntax to destructure the first layer which is an array , then the 2nd which is an object we use the curly braces syntx '{ }'
+console.log(title, author, ISBN);
