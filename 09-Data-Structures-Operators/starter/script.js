@@ -218,3 +218,20 @@ console.log(add(8, 2, 5, 3, 2, 1, 4));
 // The logical assignment operator combines logical operations with the assignment operator making code mor concise when assigning values based on conditions.
 
 // There are 3 logical assignment operators which are 1:Logical and assignment &&= op, 2: Logical or assignnment ||= op 3: nullish coallescing assignment ??=
+
+// The or assignment operator assigns a value to a variable if the variable is falsy(0,'',null,undefined,NaN)
+
+let num = 0;
+num ||= 10;
+console.log(num);
+
+// The and assignment operator assigns a value to a variable if the exact variable is truthy
+
+let num2 = 10;
+num2 &&= 20;
+console.log(num2);
+
+// The nullish coalescing assignment operator assigns a value to a variable if the variable is null or undefined.
+let a = null;
+a ??= 10;
+console.log(a);
