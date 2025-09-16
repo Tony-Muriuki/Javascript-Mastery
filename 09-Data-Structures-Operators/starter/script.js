@@ -130,3 +130,16 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+
+// THE SPREAD OPERATOR
+
+//Def: The spread operator in Javascript is a convinient and powerful syntax used to expand iterables (like arrays , sets,maps,strings) into individual elements.
+
+// Basically used for copying, merging or expanding elements of arrays or objects.
+
+const array = [7, 8, 9];
+// Never do this in your life
+const badNewArray = [1, 2, array[0], array[1], array[2]]; //No spread
+
+const goodArray = [1, 2, ...array]; //Used spread
+console.log(goodArray);
