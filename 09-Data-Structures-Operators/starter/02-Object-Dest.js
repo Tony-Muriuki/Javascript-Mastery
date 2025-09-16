@@ -235,3 +235,8 @@ console.log(title, author, ISBN);
 // const [{}] = books;
 const { keywords: tags } = books[0];
 console.log(tags);
+
+// Question 3 : The seventh book from the books array is missing the programmingLanguage property. Destructure the seventh book object (books[6]) into variables called language and programmingLanguage. Assign the programmingLanguage variable with a default value of 'unknown'.
+
+const { language, programmingLanguage = 'unknown' } = books[6];
+console.log(language, programmingLanguage);
