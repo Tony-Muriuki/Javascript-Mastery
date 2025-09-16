@@ -168,3 +168,32 @@ console.log(carArr);
 //using my Array.from()
 const myArr = Array.from(carArr);
 console.log(myArr);
+
+//Common Set Operations
+// 01:Union combining Two Sets
+
+// const union = new Set([...setA, ...setB]);
+// console.log(union);
+
+//02:Intersection: The intersection of two sets returns only the values that are present in both sets.
+const setA = new Set([1, 2, 3, 4, 5, 6]);
+const setB = new Set([3, 4, 5, 6]);
+const intersection = new Set([...setA].filter(x => setB.has(x)));
+console.log('intersection', intersection);
+
+//symetric difference: Retruns anew set that are either in a or b but are not in both
+const result = setA.symmetricDifference(setB);
+console.log(result);
+
+//05:isSubset()returns true if the elements of the current set exists in the given set
+
+const bool = setB.isSubsetOf(setA);
+console.log(bool);
+
+//06: isSuperSetOf returns tru if the current set contains all elements in the given set
+const bool2 = setA.isSupersetOf(setB);
+console.log(bool2);
+
+// 07 isDisjointFrom Returns true if both sets have no elements in common
+const bool3 = setA.isDisjointFrom(setB);
+console.log(bool3);
