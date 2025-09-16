@@ -100,3 +100,9 @@ Object.entries(user).forEach(([key, value]) => {
 
 console.log(entries);
 // ["name: Tony", "age: 25", "country: Kenya"]
+
+// SETS
+
+// A set is a collection of unique values of any type primitive or object references. They are different from arrays as the only store unique values and do not maintain any order of insertion in a strictly indexical way like arrays do.
+
+// No duplicates , unordered ,iterable
