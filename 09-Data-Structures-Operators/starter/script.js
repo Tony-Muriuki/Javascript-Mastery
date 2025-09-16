@@ -182,4 +182,7 @@ console.log(arr1);
 const [a1, b1, c1, d1, ...others] = arr1;
 console.log(a1, b1, c1, d1, others);
 
-// REST WITH OBJECTs
+// REST SYNTAX WITH OBJECTS
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
