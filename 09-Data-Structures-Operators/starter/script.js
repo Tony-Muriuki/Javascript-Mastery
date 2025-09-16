@@ -209,9 +209,12 @@ console.log(add(8, 2, 5, 3, 2, 1, 4));
 
 // Rest Pattern: The rest pattern is used in destructuring to collect remaining elements or properties into an array or object.(...)
 
-// Lecture 113: SHort Circuiting(&& and ||)
+// THE NULLISH COALESCING OPERATOR.
 
-// Short circuiting refers too the behaviour of logical operators (like && and OR ||) where the evaluation of an expression can stop as soon as the outcome is determined.
+// ----DEF: The nullish coalescing operator ?? is a logicall operator introduced in es2020 that retruns the right hand operand when the left hand operand is either null or undefined.
 
-// || short circuits evaluation and returns the first truthy value it encounters.
-// && short circuits evaluation and returns the first falsy value it encounters.
+// The Logical Assignment Operator
+
+// The logical assignment operator combines logical operations with the assignment operator making code mor concise when assigning values based on conditions.
+
+// There are 3 logical assignment operators which are 1:Logical and assignment &&= op, 2: Logical or assignnment ||= op 3: nullish coallescing assignment ??=
