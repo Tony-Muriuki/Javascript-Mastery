@@ -106,3 +106,9 @@ console.log(entries);
 // A set is a collection of unique values of any type primitive or object references. They are different from arrays as the only store unique values and do not maintain any order of insertion in a strictly indexical way like arrays do.
 
 // No duplicates , unordered ,iterable
+// 1: Creating New Sets
+const mySet = new Set();
+console.log(mySet);
+
+const mySet1 = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+console.log(mySet1);
