@@ -112,3 +112,59 @@ console.log(mySet);
 
 const mySet1 = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 console.log(mySet1);
+
+// KEY METHODS OF SETS
+
+// .size property : Returns the number of unique elements in thes set
+console.log(mySet1.size);
+
+// .has(value) Checks if a specific element exists in the set. Returns True or False
+console.log(mySet1.has(22));
+
+// .add(value) Adds new element to the set.If the element already exists in the set it wont be added.(No Duplicates)
+mySet1.add(22);
+console.log(mySet1);
+
+// .delete(Value) Removes a specific element from the set.
+mySet1.delete(22);
+console.log(mySet1);
+
+// .clear() Removes all elements from the set
+mySet1.clear();
+console.log(mySet);
+
+// Sets are iterable and you can loop over them using methods like for 0f , foreach, and destructuring
+
+// Looping using forEach
+const numbers = new Set([10, 20, 30]);
+
+numbers.forEach(value => {
+  console.log(value); // 10, 20, 30
+});
+
+// For of
+const numbers1 = new Set([10, 20, 30]);
+
+for (const num of numbers1) {
+  console.log(num); // 10, 20, 30
+}
+
+// Destructuring
+const mySet3 = new Set(['a', 'b', 'c']);
+
+for (const [key, value] of mySet3.entries()) {
+  console.log(key, value);
+}
+
+//Converting a Set to an Array
+
+const carSet = new Set(['mercedez', 'atenza', 'prado']);
+console.log(carSet.size);
+
+//Using Destructuring
+const carArr = [...carSet];
+console.log(carArr);
+
+//using my Array.from()
+const myArr = Array.from(carArr);
+console.log(myArr);
