@@ -35,6 +35,11 @@ const restaurant = {
   orderDelivery: function (obj) {
     console.log(obj);
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3},`
+    );
+  },
 
   openingHours: {
     thu: {
@@ -155,3 +160,15 @@ console.log(mainMenuCopy);
 // Joining Two Arrays Together
 const mergedArr = [...restaurant.mainMenu, ...restaurant.starterMenu];
 console.log(mergedArr);
+
+// Spreading strings using Spread Operator
+const userName = 'Jonas';
+const letters = [...userName, '', 's'];
+console.log(letters);
+
+// Reverse userName
+function reverse(arg) {
+  const word = arg.split('').reverse().join('');
+  return word;
+}
+console.log(reverse(userName));
