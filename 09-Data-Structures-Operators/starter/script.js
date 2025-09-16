@@ -186,3 +186,20 @@ console.log(a1, b1, c1, d1, others);
 
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
+
+// FUNCTIONS
+const add = function (...numbers) {
+  return numbers.reduce((sum, current) => sum + current, 0);
+};
+console.log(add(2, 3));
+console.log(add(5, 3, 7, 2));
+console.log(add(8, 2, 5, 3, 2, 1, 4));
+
+// Rest parameter: The rest parameter is used to represent an indefinate number of function arguements as an array.
+// Syntax
+// function add1(...number) {
+//   return number.reduce((sum, current) => sum + current, 0);
+// }
+// console.log(add1(2, 3, 4, 5, 6, 7, 89));
+
+// Rest Pattern: The rest pattern is used in destructuring to collect remaining elements or properties into an array or object.(...)
