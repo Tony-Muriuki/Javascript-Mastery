@@ -141,5 +141,9 @@ const array = [7, 8, 9];
 // Never do this in your life
 const badNewArray = [1, 2, array[0], array[1], array[2]]; //No spread
 
-const goodArray = [1, 2, ...array]; //Used spread
-console.log(goodArray);
+const goodNewArr = [1, 2, ...array]; //Used spread
+console.log(goodNewArr);
+
+// Creating A new Menu Using Spread Operator
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
