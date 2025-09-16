@@ -173,4 +173,13 @@ function reverse(arg) {
 }
 console.log(reverse(userName));
 
-// REST PPATTERN AND PARAMETERS
+// REST PATTERN AND PARAMETERS
+// The rest pattern uses the exact the same syntax as the spread operator but to condense them into an array opposite of the spread operator which is used to unpact or expand elements of an array
+
+const arr1 = [1, 2, 3, 4, ...[5, 6, 7, 8]]; //Spread Operator is always on the right side of the assignment operator
+console.log(arr1);
+
+const [a1, b1, c1, d1, ...others] = arr1;
+console.log(a1, b1, c1, d1, others);
+
+// REST WITH OBJECTs
