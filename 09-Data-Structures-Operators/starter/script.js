@@ -32,6 +32,9 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  orderDelivery: function (obj) {
+    console.log(obj);
+  },
 
   openingHours: {
     thu: {
@@ -48,6 +51,14 @@ const restaurant = {
     },
   },
 };
+
+// Ivoking OrderDelivery Function
+restaurant.orderDelivery({
+  time: '23.30',
+  address: 'Via del sole 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 
 //Lecture 108: DESTRUCTURING ARRAYS LESSON
 
@@ -97,3 +108,25 @@ const info = {
 // Using destructuring
 const { fname: prop1, sname: prop2 } = info;
 console.log(prop1, prop2);
+
+// Destructuring Restaurant Object
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+// Renaming Variables During Destructuring
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+// Setting Default Values During Destructuring
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Destructuring Nested Objects
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c);
