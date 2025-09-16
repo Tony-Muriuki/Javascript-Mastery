@@ -151,3 +151,7 @@ console.log(newMenu);
 // Creating Shallow copy Arrays
 const mainMenuCopy = [...restaurant.mainMenu];
 console.log(mainMenuCopy);
+
+// Joining Two Arrays Together
+const mergedArr = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(mergedArr);
