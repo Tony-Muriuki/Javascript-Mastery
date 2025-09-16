@@ -40,6 +40,10 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3},`
     );
   },
+  orderPizza: function (mainIngredients, ...otherIngredients) {
+    console.log(mainIngredients);
+    console.log(otherIngredients);
+  },
 
   openingHours: {
     thu: {
@@ -56,7 +60,8 @@ const restaurant = {
     },
   },
 };
-
+//Invoking the order Pizza function()
+console.log(restaurant.orderPizza('mushrooms', 'onions', 'cheese', 'caramel'));
 // Ivoking OrderDelivery Function
 restaurant.orderDelivery({
   time: '23.30',
@@ -203,3 +208,5 @@ console.log(add(8, 2, 5, 3, 2, 1, 4));
 // console.log(add1(2, 3, 4, 5, 6, 7, 89));
 
 // Rest Pattern: The rest pattern is used in destructuring to collect remaining elements or properties into an array or object.(...)
+
+// Lecture 113: SHort Circuiting(&& and ||)
