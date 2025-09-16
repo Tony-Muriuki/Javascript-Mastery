@@ -70,18 +70,33 @@ restaurant.orderDelivery({
   starterIndex: 2,
 });
 
-// OPTIONAL CHAINING
+//Lecture 120: Looping Objects
 
-// Optional chaining is a powerful javascript feature that allows you to safely access deeply nested properties of an object without having to check if a refrence in the chain is valid ( ? ---optional chain )
-// if any exp in the chain is null or undefined the exp will return undefined instead of an error
+const user = { name: 'Tony', age: 25, country: 'Kenya' };
+const keyVal = [];
 
-const user = {
-  name: 'Tony',
-  address: {
-    city: 'Nairobi',
-  },
-};
-console.log(user.address?.city);
-console.log(user.address?.country);
-console.log(user.profile?.bio);
-console.log(user.age?.years ?? 18);
+Object.keys(user).forEach(key => {
+  keyVal.push(key);
+});
+
+console.log(keyVal); // ["name", "age", "country"]
+
+// 2: Object.Values()
+
+const values = [];
+
+Object.values(user).forEach(value => {
+  values.push(value);
+});
+console.log(values);
+
+// Object.entries()
+
+const entries = [];
+
+Object.entries(user).forEach(([key, value]) => {
+  entries.push(`${key}: ${value}`);
+});
+
+console.log(entries);
+// ["name: Tony", "age: 25", "country: Kenya"]
