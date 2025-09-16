@@ -147,3 +147,7 @@ console.log(goodNewArr);
 // Creating A new Menu Using Spread Operator
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenu);
+
+// Creating Shallow copy Arrays
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
