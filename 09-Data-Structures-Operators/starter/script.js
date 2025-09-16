@@ -172,3 +172,5 @@ function reverse(arg) {
   return word;
 }
 console.log(reverse(userName));
+
+// REST PPATTERN AND PARAMETERS
