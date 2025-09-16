@@ -210,3 +210,8 @@ console.log(add(8, 2, 5, 3, 2, 1, 4));
 // Rest Pattern: The rest pattern is used in destructuring to collect remaining elements or properties into an array or object.(...)
 
 // Lecture 113: SHort Circuiting(&& and ||)
+
+// Short circuiting refers too the behaviour of logical operators (like && and OR ||) where the evaluation of an expression can stop as soon as the outcome is determined.
+
+// || short circuits evaluation and returns the first truthy value it encounters.
+// && short circuits evaluation and returns the first falsy value it encounters.
