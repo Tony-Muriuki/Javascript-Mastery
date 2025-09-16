@@ -223,6 +223,15 @@ const books = [
   },
 ];
 
+// Question1 :
 // Destructure the first book object from the books array into variables called title, author and ISBN.
-const [{ title, author, ISBN }] = books; // This is because the above data is an array of objects. so we use the square bracket '[ ]' syntax to destructure the first layer which is an array , then the 2nd which is an object we use the curly braces syntx '{ }'
+
+const [{ title, author, ISBN }] = books;
+// This is because the above data is an array of objects. so we use the square bracket '[ ]' syntax to destructure the first layer which is an array , then the 2nd which is an object we use the curly braces syntx '{ }'
 console.log(title, author, ISBN);
+
+// Question 2: Each book object has the keywords property. Destructure the first book object from the books array into a variable called tags. The tags variable should be assigned with the value of the keywords property.
+
+// const [{}] = books;
+const { keywords: tags } = books[0];
+console.log(tags);
