@@ -235,3 +235,18 @@ console.log(num2);
 let a = null;
 a ??= 10;
 console.log(a);
+
+// The FOR-OF-LOOP
+
+const dish = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(dish);
+
+const wifey = 'Beatrice';
+console.log(wifey);
+const wifeyNameLetters = [];
+
+// Loop through wifey name(for of loop)
+for (const char of wifey) {
+  wifeyNameLetters.push(char);
+}
+console.log(wifeyNameLetters);
