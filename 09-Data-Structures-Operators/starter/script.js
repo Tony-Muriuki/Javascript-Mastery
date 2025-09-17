@@ -197,3 +197,16 @@ console.log(bool2);
 // 07 isDisjointFrom Returns true if both sets have no elements in common
 const bool3 = setA.isDisjointFrom(setB);
 console.log(bool3);
+
+// Lecture 124 MAPS LESSON
+
+// A map is a built in javascript data structure consisting of a collection of key value pairs similar to objects.However there are key differences between a map and an object.
+
+/*
+1: A map allows any type of key (object, functions,primitives)
+2:The order of iteration on a map is based on the insertion order.
+3:The size of a map can be easily be retrieved using the .size property.
+4:A map provides more utility methods compared to plain objects.
+*/
+
+// CREATING A MAP
