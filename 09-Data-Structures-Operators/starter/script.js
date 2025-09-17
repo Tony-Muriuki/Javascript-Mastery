@@ -209,4 +209,32 @@ console.log(bool3);
 4:A map provides more utility methods compared to plain objects.
 */
 
-// CREATING A MAP
+// CREATING A MAP:There are 2 ways to create a map.
+// 1:You can create a map using the new map constructor
+const myMap = new Map();
+// 2You can also initialize a map with an array of key value pairs.
+const myMap1 = new Map([
+  ['name', 'Tony'],
+  ['age', 18],
+  ['country', 'Kenya'],
+]);
+console.log(myMap1);
+
+// Various Map Methods
+// .set('key','value')Property Adds or Updates a key value pair.If the key is already in the map it updates the value.
+myMap1.set('wife', 'Beatrice');
+console.log(myMap1);
+
+// 02.get('key') Property  Retrieves the value associated with the given key.if the key does not exist it return undefined
+console.log(myMap1.get('career'));
+
+//03: has('key) property Checks if the key exists in the map. if it exists it returns true if not it returns false.
+console.log(myMap1.has('age'));
+
+// 04:Delete('key) property Removes the key value pair associated with the key
+myMap1.delete('age');
+console.log(myMap1.size, myMap1);
+
+// .clear() Removes all key value pairs in the map
+myMap1.clear();
+console.log(myMap1);
