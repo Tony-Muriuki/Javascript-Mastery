@@ -69,3 +69,5 @@ console.log('Outside Function', Tony);
 // First-Class and High Order Functions
 
 // A programming languange is said to have first class functions when functions in that language  are treated like any other variable. For example in such a language a function can be passed aa an arguement to other functions, can be returned by another function or can be assigned as a value to a variable
+
+// Javascript treats functions as first-class functions aka first class citizens meaning they are values enabling the use of HOF- Higher Order Functions: functions that recieves one or more functions as arguements or returns a function as it results.
