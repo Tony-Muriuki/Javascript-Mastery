@@ -65,3 +65,7 @@ bornAgain(Tony);
 console.log('Outside Function', Tony);
 
 // The resaon as to why it changed is because objects are reference types and when passed to functions as arguements they are passed as references to the objects location in memory. Meaning changes inside the function affect the original.
+
+// First-Class and High Order Functions
+
+// A programming languange is said to have first class functions when functions in that language  are treated like any other variable. For example in such a language a function can be passed aa an arguement to other functions, can be returned by another function or can be assigned as a value to a variable
