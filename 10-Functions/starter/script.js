@@ -71,3 +71,27 @@ console.log('Outside Function', Tony);
 // A programming languange is said to have first class functions when functions in that language  are treated like any other variable. For example in such a language a function can be passed aa an arguement to other functions, can be returned by another function or can be assigned as a value to a variable
 
 // Javascript treats functions as first-class functions aka first class citizens meaning they are values enabling the use of HOF- Higher Order Functions: functions that recieves one or more functions as arguements or returns a function as it results.
+
+//Function that removes all spaces from a string and converts it to Lowercase
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+//Function that capitalizes only the first word of a string.
+const upperFirstWord = function (str) {
+  //Destructuring
+  const [first, ...others] = str.split(' ');
+  console.log(first);
+  return [first.toUpperCase(), ...others].join(' ');
+  // console.log(first);
+};
+
+//Creating our higher order Function
+const transformer = function (str, fn) {
+  console.log(`Original String: ${str}`);
+  console.log(`Transformed String: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
+};
+transformer('Javascript is The best', upperFirstWord);
+transformer('Javascript is The best', oneWord);
