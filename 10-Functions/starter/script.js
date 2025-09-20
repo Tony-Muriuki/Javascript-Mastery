@@ -1,97 +1,58 @@
 'use strict';
 
-//Lecture 129 Default Parameters.
+// Lecture 140: The Call, Apply and Bind Method
 
-/*
---Defination : Default parameters in functions let us assign fallback values to arguments when none are provided, making functions more flexible and concise.
-
-
-*/
-const bookings = [];
-
-const createBooking = function (flightNum, numPassengers = 1, price = 199) {
-  const booking = {
-    flightNum,
-    numPassengers,
-    price,
-  };
-  console.log(booking);
-  bookings.push(booking);
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a sit on ${this.airline} flight ${this.iataCode} ${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
 };
-createBooking('LH123');
-createBooking('LH123', 2, 800);
-
-// Lecture 136: Argument Passing in JavaScript
-console.log('------------------------------------------------------------');
-const flight = 'LH234'; // primitive (string)
-const jonas = { name: 'Jonas Schmedtmann', passport: 24739479284 }; // object
-
-// Checkin Function
-const Checkin = function (flightNum, passenger) {
-  flightNum = 'LH999';
-  passenger.name = 'MR' + passenger.name;
-  if (passenger.passport === 24739479284) {
-    console.log('Checkin');
-  } else {
-    console.log('Wrong Passport');
-  }
+//Invoke the func:
+lufthansa.book(239, 'Tony');
+lufthansa.book(635, 'Linda');
+console.log(lufthansa.bookings);
+const euroWings = {
+  airLine: 'EuroWings',
+  iataCode: 'EW',
+  bookings: [],
 };
-Checkin(flight, jonas);
-console.log(flight);
-console.log(jonas);
+const book = lufthansa.book; //This is possible because Javascript Has first class functions.
+//book(23, 'Beatrice Kamande'); //Cannot read properties of undefined (reading 'airline') We get the error because the book function is a regular function call which is undefined
 
-let person = { name: 'Alice', age: 25 };
+book.call(euroWings, 23, 'Beatrice Kamande');
+console.log(euroWings);
 
-function changePerson(myPerson) {
-  myPerson.age = 30; // mutate property
-  console.log('Inside function:', myPerson);
-}
+//Lufthansa Bookings array
+book.call(lufthansa, 23, 'Ruth Kamande');
+console.log(lufthansa);
 
-changePerson(person);
-console.log('Outside function:', person);
+//Lufthansa Child Airline
 
-const Tony = {
-  firstName: 'Tony',
-  lastName: 'Kamande',
-  girlFriend: 'Beatrice',
-  status: 'Unsaved',
+const swiss = {
+  airLine: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
 };
+book.call(swiss, 583, 'Mary Cooper');
+console.log(swiss);
 
-function bornAgain(obj) {
-  obj.status = 'Saved';
-  console.log('Inside Function', obj);
-}
-bornAgain(Tony);
-console.log('Outside Function', Tony);
+//Apply Method : It is similar to the call method but the only disparity is that it does not receive a list of arguements but rather an array of arguements
 
-// The resaon as to why it changed is because objects are reference types and when passed to functions as arguements they are passed as references to the objects location in memory. Meaning changes inside the function affect the original.
+const flightData = [583, 'George cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
 
-// First-Class and High Order Functions
-
-// A programming languange is said to have first class functions when functions in that language  are treated like any other variable. For example in such a language a function can be passed aa an arguement to other functions, can be returned by another function or can be assigned as a value to a variable
-
-// Javascript treats functions as first-class functions aka first class citizens meaning they are values enabling the use of HOF- Higher Order Functions: functions that recieves one or more functions as arguements or returns a function as it results.
-
-//Function that removes all spaces from a string and converts it to Lowercase
-const oneWord = function (str) {
-  return str.replace(/ /g, '').toLowerCase();
-};
-
-//Function that capitalizes only the first word of a string.
-const upperFirstWord = function (str) {
-  //Destructuring
-  const [first, ...others] = str.split(' ');
-  console.log(first);
-  return [first.toUpperCase(), ...others].join(' ');
-  // console.log(first);
-};
-
-//Creating our higher order Function
-const transformer = function (str, fn) {
-  console.log(`Original String: ${str}`);
-  console.log(`Transformed String: ${fn(str)}`);
-
-  console.log(`Transformed by: ${fn.name}`);
-};
-transformer('Javascript is The best', upperFirstWord);
-transformer('Javascript is The best', oneWord);
+const newMap = new Map([
+  ['name', 'Tony'],
+  ['age', 22],
+  ['marital status', 'married'],
+  ['wife', 'Beatrice'],
+  ['carWHip', 'Merc Gle400d'],
+]);
+console.log(newMap);
