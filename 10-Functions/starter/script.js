@@ -90,3 +90,11 @@ const greetAlice = person.greet.bind(person);
 // where `this` is forever tied to `person`.
 greetAlice();
 // ✅ "Hi, I’m Alice"
+
+/*Explanation:
+
+person.greet by itself loses connection to person.
+
+.bind(person) makes a new function (greetAlice) where this always equals person.
+
+Even if you call greetAlice() from somewhere else, it will still point to Alice.*/
