@@ -11,4 +11,5 @@
 // Abstraction
 //So abstraction is one of the fundamentals of OOP in that it ignores or hides details that dont matter providing a simplified view(blackBox)eg: Phone analogy: Users see a screen and buttons while the other detailings like motherboard , chips , phone temperature and voltage are abstracted.
 
-// 2:
+// 2:Encapsulation
+// Keeping properties and methods private inside the class so that they are not accessibe from outside the class.Protects internal state wih private properties.
