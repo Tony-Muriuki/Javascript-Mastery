@@ -48,11 +48,45 @@ const flightData = [583, 'George cooper'];
 book.apply(swiss, flightData);
 console.log(swiss);
 
-const newMap = new Map([
-  ['name', 'Tony'],
-  ['age', 22],
-  ['marital status', 'married'],
-  ['wife', 'Beatrice'],
-  ['carWHip', 'Merc Gle400d'],
-]);
-console.log(newMap);
+const votersDetail = {
+  name: 'Tony Muriuki Kamande',
+  marital_status: 'Married',
+  religion: 'Christian',
+  assembly: 'CITAM',
+  membId: 1987,
+  booksRead: [],
+  books(title, testament) {
+    const bookDetail = { title, testament }; // create a book object
+    console.log(bookDetail);
+    this.booksRead.push(bookDetail); // push the object, not the function
+  },
+};
+
+const readbooks = votersDetail.books;
+readbooks.call(votersDetail, 'Genesis', 'Old Testament');
+readbooks.call(votersDetail, 'Matthew', 'New Testament');
+
+console.log(votersDetail);
+
+//The .BIND() Property
+const person = {
+  name: 'Alice',
+  greet() {
+    console.log('Hi, I’m ' + this.name);
+  },
+};
+
+// Copy the method into a variable:
+const greetFn = person.greet;
+
+// Calling it directly loses `this`:
+// greetFn();
+// ❌ "Hi, I’m undefined" (because `this` is no longer `person`)
+
+// Use .bind() to fix this:
+const greetAlice = person.greet.bind(person);
+
+// Now greetAlice is a *new function*,
+// where `this` is forever tied to `person`.
+greetAlice();
+// ✅ "Hi, I’m Alice"
