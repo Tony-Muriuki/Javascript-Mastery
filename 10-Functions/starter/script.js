@@ -98,3 +98,16 @@ person.greet by itself loses connection to person.
 .bind(person) makes a new function (greetAlice) where this always equals person.
 
 Even if you call greetAlice() from somewhere else, it will still point to Alice.*/
+
+// Example 2 — Binding Arguments (Partial Application)
+
+function multiply(a, b) {
+  return a * b;
+}
+
+// Create a new function where 'a' is fixed to 2
+const double = multiply.bind(null, 2);
+
+// 'double' is a new function that only needs 'b'
+console.log(double(5)); // ✅ 10
+console.log(double(7)); // ✅ 14
