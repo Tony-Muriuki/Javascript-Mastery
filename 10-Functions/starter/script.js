@@ -111,3 +111,22 @@ const double = multiply.bind(null, 2);
 // 'double' is a new function that only needs 'b'
 console.log(double(5)); // ✅ 10
 console.log(double(7)); // ✅ 14
+
+// const counter = {
+//   count: 0,
+//   increment() {
+//     this.count++;
+//     console.log(this.count);
+//   },
+// };
+
+// // Without bind: 'this' becomes the button element!
+// // document.querySelector("button")
+// // .addEventListener("click", counter.increment);
+// // ❌ NaN or error, because 'this' is the button, not counter
+
+// // With bind: 'this' is fixed to 'counter'
+// document
+//   .querySelector('button')
+//   .addEventListener('click', counter.increment.bind(counter));
+// // ✅ Works: each click increases counter.count
