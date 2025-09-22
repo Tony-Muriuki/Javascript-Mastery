@@ -130,3 +130,14 @@ console.log(double(7)); // ✅ 14
 //   .querySelector('button')
 //   .addEventListener('click', counter.increment.bind(counter));
 // // ✅ Works: each click increases counter.count
+
+// Immediately Invoked Functions.
+// A IIFE - immediately invoked function expression is a function that runs or executes immediately after its defined. Its mainly used for one-time execution(can't run it again) and keeping variables private.
+
+(function () {
+  console.log('This will only run once');
+})();
+
+//Using an Arrow Function
+
+(() => console.log('This will also never run again'))();
