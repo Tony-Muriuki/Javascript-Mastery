@@ -13,3 +13,6 @@
 
 // 2:Encapsulation
 // Keeping properties and methods private inside the class so that they are not accessibe from outside the class.Protects internal state wih private properties.
+
+// 03:Inheritance.
+// Allows a child class to reuse logic from a parent class.Inherits all properties and methods from parent class plus there own
