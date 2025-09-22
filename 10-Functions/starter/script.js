@@ -141,3 +141,15 @@ console.log(double(7)); // ✅ 14
 //Using an Arrow Function
 
 (() => console.log('This will also never run again'))();
+
+//CLOSURES
+// A closure is a feature in Javascript that allows a function to recall and access variables from the parent scope even after it has exited the call stack or it has finished execution
+
+const secureBooking = function () {
+  let passengerCount = 0;
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+const booker = secureBooking();
