@@ -16,3 +16,6 @@
 
 // 03:Inheritance.
 // Allows a child class to reuse logic from a parent class.Inherits all properties and methods from parent class plus there own
+
+// 04:Polymorphism
+// Polymorphism means many forms. A child class can override methods inherited from its parent class.
