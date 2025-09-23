@@ -2,20 +2,14 @@
 
 // OBJECT ORIENTED PROGRAMMING.
 
-// Object oriented programming is a just but a programming paradigm (style of writing code) that is based on objects. Obhects can contain data which we call properties and code which we call methods . In OOP objects group data + code/behaviour into one self contained block.
+// Constructor Functions and The New Operator
 
-// A class is a blueprint for creating objects. An object created from a class is an instances and we can have multiple instances created from a class .
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
 
-// There are 4 fundamental principles that can guide us towrds a good class implementation which are Abstraction, Polymorphism, Encapsulation ,and Inheritance.
-
-// Abstraction
-//So abstraction is one of the fundamentals of OOP in that it ignores or hides details that dont matter providing a simplified view(blackBox)eg: Phone analogy: Users see a screen and buttons while the other detailings like motherboard , chips , phone temperature and voltage are abstracted.
-
-// 2:Encapsulation
-// Keeping properties and methods private inside the class so that they are not accessibe from outside the class.Protects internal state wih private properties.
-
-// 03:Inheritance.
-// Allows a child class to reuse logic from a parent class.Inherits all properties and methods from parent class plus there own
-
-// 04:Polymorphism
-// Polymorphism means many forms. A child class can override methods inherited from its parent class.
+const jonas = new Person('Jonas', 1991);
+const mary = new Person('Mary', 991);
+console.log(jonas instanceof Person);
+console.log(mary instanceof Person);
