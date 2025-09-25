@@ -12,4 +12,9 @@ class Personcl {
   }
 }
 const jessica = new Personcl('Jessica', 1996);
-jessica.calcAge();
+
+//Adding A Greet Method Manually To the Prototype
+Personcl.prototype.greet = function () {
+  console.log(`Hey ${this.firstName} method Added!`);
+};
+jessica.greet();
