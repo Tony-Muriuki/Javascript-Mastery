@@ -18,3 +18,7 @@ Personcl.prototype.greet = function () {
   console.log(`Hey ${this.firstName} method Added!`);
 };
 jessica.greet();
+
+//Getters and Setters
+
+//So every object in javascript has a common features called getters and setters.This special properties are what we call/Refer to as Assesor properties while the normal properties are refered to as data properties.So getters and setters are basically functions that get and set the value.
