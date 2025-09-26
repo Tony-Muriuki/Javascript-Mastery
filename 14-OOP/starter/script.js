@@ -2,8 +2,8 @@
 //Class Declaration
 class Personcl {
   //Adding a constructor Method
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
     this.birthYear = birthYear;
   }
   //Adding a Method
@@ -15,7 +15,7 @@ class Personcl {
     return 2037 - this.birthYear;
   }
 }
-const jessica = new Personcl('Jessica', 1996);
+const jessica = new Personcl('Jessica Davis', 1996);
 //Jessicas Prototype
 console.log(jessica);
 //Getting Jesiccas Age
