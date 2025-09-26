@@ -14,6 +14,12 @@ class Personcl {
   get age() {
     return 2037 - this.birthYear;
   }
+  //Check if it has Space
+  set fullname(name) {
+    console.log(name);
+    if (name.includes(' ')) this.fullName = name;
+    else alert`${name} is not a fullName`;
+  }
 }
 const jessica = new Personcl('Jessica Davis', 1996);
 //Jessicas Prototype
