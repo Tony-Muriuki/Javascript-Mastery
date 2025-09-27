@@ -6,21 +6,30 @@ class Personcl {
     this.fullName = fullName;
     this.birthYear = birthYear;
   }
-  //Adding a Method
   calcAge() {
-    console.log(2035 - this.birthYear);
+    console.log(2037 - this.birthYear);
   }
-  //Getter For The Age Property
+
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+
   get age() {
     return 2037 - this.birthYear;
   }
-  //Check if it has Space
-  set fullname(name) {
-    console.log(name);
-    if (name.includes(' ')) this.fullName = name;
-    else alert`${name} is not a fullName`;
+
+  // Set a property that already exists
+  set fullName(name) {
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
   }
 }
+
+const walter = new Personcl('Walter White', 1965);
 const jessica = new Personcl('Jessica Davis', 1996);
 //Jessicas Prototype
 console.log(jessica);
@@ -59,3 +68,7 @@ account.latest = 50;
 console.log(account.movements); //50 was added.
 
 //Setters and Getters can actually Be Very Useful For Data Validation
+
+//Lecture 228 STATIC Methods
+
+//Static methods:This are methods that are defined on constructors or classes themselves ,not on the instances and are typically used as helper utilities tied to a class/constructors namespace
