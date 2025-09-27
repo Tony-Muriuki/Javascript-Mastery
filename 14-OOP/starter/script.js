@@ -6,6 +6,7 @@ class Personcl {
     this.fullName = fullName;
     this.birthYear = birthYear;
   }
+  //Instance Methods This are methods that will be added to The .Prototype Property(For Instances Access)
   calcAge() {
     console.log(2037 - this.birthYear);
   }
@@ -27,8 +28,13 @@ class Personcl {
   get fullName() {
     return this._fullName;
   }
+  //Static Method
+  static hey() {
+    console.log(this);
+    console.log('Hey There ');
+  }
 }
-
+Personcl.hey();
 const walter = new Personcl('Walter White', 1965);
 const jessica = new Personcl('Jessica Davis', 1996);
 //Jessicas Prototype
@@ -72,3 +78,16 @@ console.log(account.movements); //50 was added.
 //Lecture 228 STATIC Methods
 
 //Static methods:This are methods that are defined on constructors or classes themselves ,not on the instances and are typically used as helper utilities tied to a class/constructors namespace
+
+const Person = function (firtsName, birthYear) {
+  this.firstName = this.firstName;
+  this.birthYear = birthYear;
+};
+//Add Static Method
+Person.hey = function () {
+  console.log(this);
+  console.log('Hey There ');
+};
+Person.hey();
+
+// /Lecture 228 Object.create()
