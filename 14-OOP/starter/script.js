@@ -149,18 +149,22 @@ class Car {
   }
   //Accelerate Methods
   accelerate() {
-    const acceleratedSpeed = this.speed + 10;
-    console.log(acceleratedSpeed);
+    this.speed += 10;
+    console.log(this.speed);
   }
   //Brake Method
   brake() {
-    const decreasedSpeed = this.speed - 5;
-    console.log(decreasedSpeed);
+    this.speed -= 5;
+    console.log(this.speed);
   }
   //Getter Func speedUS
-  get speedUS() {}
+  get speedUS() {
+    console.log('Get', this.speed / 1.6);
+  }
   //Setter Func speedUS
-  set speedUS(speed) {}
+  set speedUS(speed) {
+    return (this.speed = speed * 1.6);
+  }
 }
 const ford = new Car('Ford', 120);
 console.log(ford);
@@ -168,3 +172,7 @@ console.log(ford);
 ford.accelerate();
 //Decreased Speeds
 ford.brake();
+//Speed in mi/h
+ford.speedUS = 50;
+console.log(ford);
+ford.speedUS;
