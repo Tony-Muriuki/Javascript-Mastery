@@ -166,3 +166,5 @@ const ford = new Car('Ford', 120);
 console.log(ford);
 //Accelerated Speeds
 ford.accelerate();
+//Decreased Speeds
+ford.brake();
