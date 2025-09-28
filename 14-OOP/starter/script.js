@@ -91,3 +91,27 @@ Person.hey = function () {
 Person.hey();
 
 // /Lecture 228 Object.create()
+
+const PersonProt0 = {
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  },
+  //Adding Method to Create Properties for us
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProt0); //Here we pass in the object that we want it to be the prototype of the new object.
+steven.name = 'Steven';
+steven.birthYear = 2002;
+steven.calcAge();
+console.log(steven.__proto__ === PersonProt0);
+console.log(PersonProt0.__proto__ === Object.prototype);
+console.log(Object.prototype.__proto__ === null);
+
+//New Object
+const sarah = Object.create(PersonProt0);
+sarah.init('Sarah', 1979);
+sarah.calcAge();
