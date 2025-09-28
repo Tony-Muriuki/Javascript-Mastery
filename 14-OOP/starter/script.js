@@ -164,5 +164,5 @@ class Car {
 }
 const ford = new Car('Ford', 120);
 console.log(ford);
-//Accelerated Speed
+//Accelerated Speeds
 ford.accelerate();
