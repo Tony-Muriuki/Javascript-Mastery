@@ -176,3 +176,5 @@ ford.brake();
 ford.speedUS = 50;
 console.log(ford);
 ford.speedUS;
+
+//Inheritance Between Classes Constructor(Parent-> Child)
