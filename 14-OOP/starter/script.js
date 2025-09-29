@@ -1,51 +1,51 @@
 'use strict';
-//Class Declaration
-class Personcl {
-  //Adding a constructor Method
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
-  //Instance Methods This are methods that will be added to The .Prototype Property(For Instances Access)
-  calcAge() {
-    console.log(2037 - this.birthYear);
-  }
+// //Class Declaration
+// class Personcl {
+//   //Adding a constructor Method
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
+//   //Instance Methods This are methods that will be added to The .Prototype Property(For Instances Access)
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   }
 
-  greet() {
-    console.log(`Hey ${this.fullName}`);
-  }
+//   greet() {
+//     console.log(`Hey ${this.fullName}`);
+//   }
 
-  get age() {
-    return 2037 - this.birthYear;
-  }
+//   get age() {
+//     return 2037 - this.birthYear;
+//   }
 
-  // Set a property that already exists
-  set fullName(name) {
-    if (name.includes(' ')) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
+//   // Set a property that already exists
+//   set fullName(name) {
+//     if (name.includes(' ')) this._fullName = name;
+//     else alert(`${name} is not a full name!`);
+//   }
 
-  get fullName() {
-    return this._fullName;
-  }
-  //Static Method
-  static hey() {
-    console.log(this);
-    console.log('Hey There ');
-  }
-}
-Personcl.hey();
-const walter = new Personcl('Walter White', 1965);
-const jessica = new Personcl('Jessica Davis', 1996);
-//Jessicas Prototype
-console.log(jessica);
-//Getting Jesiccas Age
-console.log(jessica.age);
-//Adding A Greet Method Manually To the Prototype
-Personcl.prototype.greet = function () {
-  console.log(`Hey ${this.firstName} method Added!`);
-};
-jessica.greet();
+//   get fullName() {
+//     return this._fullName;
+//   }
+//   //Static Method
+//   static hey() {
+//     console.log(this);
+//     console.log('Hey There ');
+//   }
+// }
+// Personcl.hey();
+// const walter = new Personcl('Walter White', 1965);
+// const jessica = new Personcl('Jessica Davis', 1996);
+// //Jessicas Prototype
+// console.log(jessica);
+// //Getting Jesiccas Age
+// console.log(jessica.age);
+// //Adding A Greet Method Manually To the Prototype
+// Personcl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName} method Added!`);
+// };
+// jessica.greet();
 
 //Getters and Setters
 
@@ -207,3 +207,39 @@ Student.prototype.introduce = function () {
 };
 mike.introduce();
 mike.calcAge();
+
+//Inheritance Between Classes ES6 Classes
+class Personcl {
+  //Adding a constructor Method
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+  //Instance Methods This are methods that will be added to The .Prototype Property(For Instances Access)
+  calcAge() {
+    console.log(2037 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.fullName}`);
+  }
+
+  get age() {
+    return 2037 - this.birthYear;
+  }
+
+  // Set a property that already exists
+  set fullName(name) {
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+  //Static Method
+  static hey() {
+    console.log(this);
+    console.log('Hey There ');
+  }
+}
