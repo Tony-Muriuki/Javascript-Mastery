@@ -79,16 +79,16 @@ console.log(account.movements); //50 was added.
 
 //Static methods:This are methods that are defined on constructors or classes themselves ,not on the instances and are typically used as helper utilities tied to a class/constructors namespace
 
-const Person = function (firtsName, birthYear) {
+const Person1 = function (firtsName, birthYear) {
   this.firstName = this.firstName;
   this.birthYear = birthYear;
 };
 //Add Static Method
-Person.hey = function () {
+Person1.hey = function () {
   console.log(this);
   console.log('Hey There ');
 };
-Person.hey();
+Person1.hey();
 
 // /Lecture 228 Object.create()
 
@@ -178,3 +178,32 @@ console.log(ford);
 ford.speedUS;
 
 //Inheritance Between Classes Constructor(Parent-> Child)
+
+//-------This is The Parent Class
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+//-------This is the child class
+const Student = function (firstName, birthYear, course) {
+  // this.firstName = firstName;
+  // this.birthYear = birthYear;----Violates the DRY Principle
+  Person.call(this, firstName, birthYear);
+  this.course = course;
+};
+//Linking Student to Person Manually For Inheritance
+Student.prototype = Object.create(Person.prototype);
+
+//Instantiation
+const mike = new Student('Mike', 2020, 'Computer Science');
+console.log(mike);
+
+//Adding Method Introduce To The Prototype
+Student.prototype.introduce = function () {
+  console.log(`My name is ${this.firstName} and i study ${this.course}`);
+};
+mike.introduce();
+mike.calcAge();
