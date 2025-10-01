@@ -2,4 +2,4 @@
 
 //DoM Manipulation Lectures.
 console.log(document.querySelector('.message').textContent);
-console.log(typeof document);
+document.querySelector('.message').textContent = 'Correct Number';
