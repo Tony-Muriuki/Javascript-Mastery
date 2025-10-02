@@ -10,5 +10,9 @@ document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value); //We use value to get the value field*/
 
 document.querySelector('.check').addEventListener('click', function () {
-  console.log(document.querySelector('.guess').value);
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(typeof guess, guess);
+  if (!guess) {
+    document.querySelector('.message').textContent = 'No number Entered';
+  }
 });
